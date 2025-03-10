@@ -9,11 +9,10 @@ public class Car implements CarRequirements {
     /**
      * Constructor
      * @param max Maximum capacity for the car
-     * @param num Number of passengers on the car
      */
-    public Car(int max, int num) {
+    public Car(int max) {
         this.maxCapacity = max;
-        this.passengers = new ArrayList<>(num);
+        this.passengers = new ArrayList<>(max);
     }
 
     /**
@@ -87,7 +86,7 @@ public class Car implements CarRequirements {
      * @param args
      */
     public static void main(String[] args) {
-        Car newCar = new Car(2, 0);
+        Car newCar = new Car(2);
         Passenger person1 = new Passenger("1");
         Passenger person2 = new Passenger("2");
         Passenger person3 = new Passenger("3");

@@ -48,7 +48,7 @@ public class Passenger implements PassengerRequirements{
      * @param args
      */
     public static void main(String[] args) {
-        Car newCar = new Car(2, 0);
+        Car newCar = new Car(2);
         Passenger person1 = new Passenger("1");
         Passenger person2 = new Passenger("2");
         Passenger person3 = new Passenger("3");

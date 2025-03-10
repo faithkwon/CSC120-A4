@@ -14,12 +14,11 @@ public class Train implements TrainRequirements{
      * @param passengerCapacity max capacity of one car in the train
      */
     public Train(FuelType fuelType, double fuelCapacity, int nCars, int passengerCapacity) {
-        this.engine = new Engine(fuelType, 0, fuelCapacity);
+        this.engine = new Engine(fuelType, fuelCapacity, fuelCapacity);
         this.cars = new ArrayList<>(nCars);
 
         for (int i = 0; i < nCars; i++) {
-            //cars.set(i, new Car(passengerCapacity, 0));
-            Car newCar = new Car(passengerCapacity, 0);
+            Car newCar = new Car(passengerCapacity);
             this.cars.add(newCar);
         }
     }
@@ -35,6 +34,7 @@ public class Train implements TrainRequirements{
     /**
      * Getter method for specific car in the train
      * @return specific car in train
+     * @param i index of specific car
      */
     public Car getCar(int i) {
         return cars.get(i);
